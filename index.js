@@ -1,9 +1,10 @@
 const mongoose = require('mongoose');
 const usuarioControlador = require('./src/controllers/usuario.controller');
 const app = require('./app');
-
+// MongoDb Compas: mongodb+srv://Grupo4:Grupo4@cluster0.tm8stud.mongodb.net/Med&Chat 
+// MongoDb url online: mongodb+srv://Grupo4:Grupo4@cluster0.tm8stud.mongodb.net/Med&Chat/?retryWrites=true&w=majority           
 mongoose.Promise = global.Promise;
-mongoose.connect('mongodb://localhost:27017/Med&Chat', { useNewUrlParser: true, useUnifiedTopology: true }).then(()=>{
+mongoose.connect('mongodb+srv://Grupo4:Grupo4@cluster0.tm8stud.mongodb.net/Med&Chat?retryWrites=true&w=majority', { useNewUrlParser: true, useUnifiedTopology: true }).then(()=>{
     console.log("Se encuentra conectado a la base de datos.");
 
     app.listen(3000, function () {
@@ -12,3 +13,7 @@ mongoose.connect('mongodb://localhost:27017/Med&Chat', { useNewUrlParser: true, 
     })
 
 }).catch(error => console.log(error));
+
+// url de google https://cloud.mongodb.com/v2/62bc7b267dead06f9a870334#metrics/replicaSet/62bc7b9f65f084320f6ed738/explorer/Med%26Chat/usuarios/find
+// Mail: grupo4in5bv@gmail.com
+// Contraseña: Grupo1234
