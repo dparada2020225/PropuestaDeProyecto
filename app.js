@@ -5,13 +5,14 @@ var app = express();
 const UsuarioRutas = require('./src/routes/usuario.routes');
 const ProductosRutas = require('./src/routes/productos.routes');
 const ChatRutas = require('./src/routes/chat.routes');
+const recordatorioRoutes = require('./src/routes/recordatorio.routes');
 
 app.use(express.urlencoded({ extended: false }));
 app.use(express.json());
 
 app.use(cors());
 
-app.use('/api', UsuarioRutas,ProductosRutas,ChatRutas);
+app.use('/api', UsuarioRutas,ProductosRutas,ChatRutas, recordatorioRoutes);
 
 
 module.exports = app;
