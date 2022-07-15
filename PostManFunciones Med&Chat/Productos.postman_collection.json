@@ -1,0 +1,156 @@
+{
+	"info": {
+		"_postman_id": "d8a1bd00-6a42-4bc9-84f1-5d5ba714db7a",
+		"name": "Productos",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "19235792"
+	},
+	"item": [
+		{
+			"name": "AgregarProductos",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiI2MmNkMmE2NGVkMDhmYzNiYmRhNzZlM2UiLCJub21icmUiOiJBZG1pbmlzdHJhZG9yIiwicm9sIjoiQWRtaW5pc3RyYWRvciIsImlhdCI6MTY1NzYxNzY4NCwiZXhwIjoxNjU4MDQ5Njg0fQ.fKOvo8rpnf8Vhbd29L8xlL2F2Fg6aQLRMxxmXTYSbMo",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "nombre",
+							"value": "Ibuprofeno",
+							"type": "text"
+						},
+						{
+							"key": "descripcion",
+							"value": "madicamento para la infeccion de 200mg",
+							"type": "text"
+						},
+						{
+							"key": "cantidad",
+							"value": "100",
+							"type": "text"
+						},
+						{
+							"key": "precio",
+							"value": "10",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "localhost:3000/api/AgregarProductos",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"AgregarProductos"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "EditarProducto",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiI2MmNkMmE2NGVkMDhmYzNiYmRhNzZlM2UiLCJub21icmUiOiJBZG1pbmlzdHJhZG9yIiwicm9sIjoiQWRtaW5pc3RyYWRvciIsImlhdCI6MTY1NzY5NTUyOSwiZXhwIjoxNjU4MDQxMTI5fQ.gLgwZJZKuza6IzFdKBw2RT_7Mp6srTvR5xg247OcFK4",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "nombre",
+							"value": "Diclofenaco2",
+							"type": "text"
+						},
+						{
+							"key": "descripcion",
+							"value": "madicamento para la infeccion de 200mg",
+							"type": "text"
+						},
+						{
+							"key": "precio",
+							"value": "101",
+							"type": "text"
+						},
+						{
+							"key": "cantidad",
+							"value": "101",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "localhost:3000/api/EditarProducto/62cd3d746ea6979be0c77547",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"EditarProducto",
+						"62cd3d746ea6979be0c77547"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "EliminarProducto",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiI2MmNkMmE2NGVkMDhmYzNiYmRhNzZlM2UiLCJub21icmUiOiJBZG1pbmlzdHJhZG9yIiwicm9sIjoiQWRtaW5pc3RyYWRvciIsImlhdCI6MTY1NzY5NjE4NCwiZXhwIjoxNjU4MDQxNzg0fQ.UElWl-OhvZ1EDf6Nym04-AdO9Rip3LKz0sIBz8-Ch6g",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "localhost:3000/api/EliminarProducto/62cd3d746ea6979be0c77547",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"EliminarProducto",
+						"62cd3d746ea6979be0c77547"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "VerProductos",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:3000/api/VerProductos",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"VerProductos"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

@@ -1,0 +1,422 @@
+{
+	"info": {
+		"_postman_id": "ff51fc39-0918-4e68-a8b0-58b2c8f36cf5",
+		"name": "User",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "19235792"
+	},
+	"item": [
+		{
+			"name": "Login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "email",
+							"value": "Administrador@gmail.com",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "password",
+							"value": "123456",
+							"type": "text"
+						},
+						{
+							"key": "obtenerToken",
+							"value": "true",
+							"type": "text"
+						},
+						{
+							"key": "email",
+							"value": "Admin1@gmail",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "email",
+							"value": "Doc1@gmail",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "localhost:3000/api/login",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "RegistrarPaciente",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiI2MmNkMmE2NGVkMDhmYzNiYmRhNzZlM2UiLCJub21icmUiOiJBZG1pbmlzdHJhZG9yIiwicm9sIjoiQWRtaW5pc3RyYWRvciIsImlhdCI6MTY1NzYxMjk3OSwiZXhwIjoxNjU4MDQ0OTc5fQ.mOsZRSXEIf6M3vzXvuBw5aLp1zVs3YJbN6TarTztsZI",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "nombre",
+							"value": "Denil3",
+							"type": "text"
+						},
+						{
+							"key": "email",
+							"value": "Denil3@gmail",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "123456",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "localhost:3000/api/RegistrarPaciente",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"RegistrarPaciente"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "RegistrarAdministrador",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiI2MmNkMmE2NGVkMDhmYzNiYmRhNzZlM2UiLCJub21icmUiOiJBZG1pbmlzdHJhZG9yIiwicm9sIjoiQWRtaW5pc3RyYWRvciIsImlhdCI6MTY1NzYxMjk3OSwiZXhwIjoxNjU4MDQ0OTc5fQ.mOsZRSXEIf6M3vzXvuBw5aLp1zVs3YJbN6TarTztsZI",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "nombre",
+							"value": "Admin3",
+							"type": "text"
+						},
+						{
+							"key": "email",
+							"value": "Admin3@gmail",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "123456",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "localhost:3000/api/RegistrarAdministrador",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"RegistrarAdministrador"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "RegistrarDoctor",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiI2MmNkMmE2NGVkMDhmYzNiYmRhNzZlM2UiLCJub21icmUiOiJBZG1pbmlzdHJhZG9yIiwicm9sIjoiQWRtaW5pc3RyYWRvciIsImlhdCI6MTY1NzYxMjk3OSwiZXhwIjoxNjU4MDQ0OTc5fQ.mOsZRSXEIf6M3vzXvuBw5aLp1zVs3YJbN6TarTztsZI",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "nombre",
+							"value": "Doc3",
+							"type": "text"
+						},
+						{
+							"key": "email",
+							"value": "Doc3@gmail",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "123456",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "localhost:3000/api/RegistrarDoctor",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"RegistrarDoctor"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "EditarPerfil",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiI2MmNkMjE4YTMzZjE1OTFkNTFkMzUzZmEiLCJub21icmUiOiJEZW5pbDMiLCJyb2wiOiJQYWNpZW50ZSIsImlhdCI6MTY1NzYxMjE3NCwiZXhwIjoxNjU4MDQ0MTc0fQ.ai0xzUHbz1atQLVKjySmVR9k8V3DZF1zc8-dWTgWEuk",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "nombre",
+							"value": "Denil3",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "localhost:3000/api/EditarPerfil",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"EditarPerfil"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "EliminarPerfil",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiI2MmNkMjA1OGYyM2I1Mzc0ZjdkZDRkY2EiLCJub21icmUiOiJBZG1pbmlzdHJhZG9yIiwicm9sIjoiQWRtaW5pc3RyYWRvciIsImlhdCI6MTY1NzYxMjg3NSwiZXhwIjoxNjU4MDQ0ODc1fQ.S3adpwerFSdzOF528I3jai5egOqacFnHiB8zqMY18cc",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "nombre",
+							"value": "Denil3",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "localhost:3000/api/EliminarPerfil",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"EliminarPerfil"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "VerDoctores",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiI2MmNkMmE2NGVkMDhmYzNiYmRhNzZlM2UiLCJub21icmUiOiJBZG1pbmlzdHJhZG9yIiwicm9sIjoiQWRtaW5pc3RyYWRvciIsImlhdCI6MTY1NzYxMzQ4NywiZXhwIjoxNjU4MDQ1NDg3fQ.qitynSxGRkC8qabDyIymA2mk0YxrNZ4MV_9BaBIVhU8",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": []
+				},
+				"url": {
+					"raw": "localhost:3000/api/VerDoctores",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"VerDoctores"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "VerPacientes",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiI2MmNkMmE2NGVkMDhmYzNiYmRhNzZlM2UiLCJub21icmUiOiJBZG1pbmlzdHJhZG9yIiwicm9sIjoiQWRtaW5pc3RyYWRvciIsImlhdCI6MTY1NzYxMzQ4NywiZXhwIjoxNjU4MDQ1NDg3fQ.qitynSxGRkC8qabDyIymA2mk0YxrNZ4MV_9BaBIVhU8",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": []
+				},
+				"url": {
+					"raw": "localhost:3000/api/VerPacientes",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"VerPacientes"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "VerUsuarios",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiI2MmNkMmE2NGVkMDhmYzNiYmRhNzZlM2UiLCJub21icmUiOiJBZG1pbmlzdHJhZG9yIiwicm9sIjoiQWRtaW5pc3RyYWRvciIsImlhdCI6MTY1NzYxMzQ4NywiZXhwIjoxNjU4MDQ1NDg3fQ.qitynSxGRkC8qabDyIymA2mk0YxrNZ4MV_9BaBIVhU8",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": []
+				},
+				"url": {
+					"raw": "localhost:3000/api/VerUsuarios",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"VerUsuarios"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "EliminarPaciente",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiI2MmNkMmE2NGVkMDhmYzNiYmRhNzZlM2UiLCJub21icmUiOiJBZG1pbmlzdHJhZG9yIiwicm9sIjoiQWRtaW5pc3RyYWRvciIsImlhdCI6MTY1NzYxNDcwOCwiZXhwIjoxNjU4MDQ2NzA4fQ.OEEcDeG8-WDz1A8ZO1RskHzHmRF2LbAFTBGW0Ew6MGU",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": []
+				},
+				"url": {
+					"raw": "localhost:3000/api/EliminarPaciente/62cd2ac4ed08fc3bbda76e42",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"EliminarPaciente",
+						"62cd2ac4ed08fc3bbda76e42"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "EliminarDoctor",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiI2MmNkMmE2NGVkMDhmYzNiYmRhNzZlM2UiLCJub21icmUiOiJBZG1pbmlzdHJhZG9yIiwicm9sIjoiQWRtaW5pc3RyYWRvciIsImlhdCI6MTY1NzYxNDcwOCwiZXhwIjoxNjU4MDQ2NzA4fQ.OEEcDeG8-WDz1A8ZO1RskHzHmRF2LbAFTBGW0Ew6MGU",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": []
+				},
+				"url": {
+					"raw": "localhost:3000/api/EliminarDoctor/62cd2d89fa418f373d3e3266",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"EliminarDoctor",
+						"62cd2d89fa418f373d3e3266"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

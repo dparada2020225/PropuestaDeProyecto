@@ -1,0 +1,123 @@
+{
+	"info": {
+		"_postman_id": "ab2dc3a7-f5ae-4b37-9588-44fad80d4eb9",
+		"name": "Chats",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "19235792"
+	},
+	"item": [
+		{
+			"name": "AsignarChat",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiI2MmNkMmE2NGVkMDhmYzNiYmRhNzZlM2UiLCJub21icmUiOiJBZG1pbmlzdHJhZG9yIiwicm9sIjoiQWRtaW5pc3RyYWRvciIsImlhdCI6MTY1NzcwMzQ4NCwiZXhwIjoxNjU4MDQ5MDg0fQ.4ehJUkBqcy0_2goTq05uXx2RA9uaAnp4yzwAVQYf85w",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "Paciente",
+							"value": "62cd2b1bed08fc3bbda76e57",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "Doctor",
+							"value": "62cd2acfed08fc3bbda76e45",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "Paciente",
+							"value": "62cd2acfed08fc3bbda76e45",
+							"type": "text"
+						},
+						{
+							"key": "Doctor",
+							"value": "62cd2b13ed08fc3bbda76e54",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "localhost:3000/api/AsignarChat",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"AsignarChat"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "verChatsCreados",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiI2MmNkMmE2NGVkMDhmYzNiYmRhNzZlM2UiLCJub21icmUiOiJBZG1pbmlzdHJhZG9yIiwicm9sIjoiQWRtaW5pc3RyYWRvciIsImlhdCI6MTY1NzcwMzQ4NCwiZXhwIjoxNjU4MDQ5MDg0fQ.4ehJUkBqcy0_2goTq05uXx2RA9uaAnp4yzwAVQYf85w",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "localhost:3000/api/verChatsCreados",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"verChatsCreados"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "nuevoMensaje",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiI2MmNkMmIxM2VkMDhmYzNiYmRhNzZlNTQiLCJub21icmUiOiJEb2MxIiwicm9sIjoiRG9jdG9yIiwiaWF0IjoxNjU3ODM3NzYzLCJleHAiOjE2NTgwOTY5NjN9.tfLGmFrG6vsrgbNSmR-N5pJ7xarU67CjUTR57ywkzOg",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "mensaje",
+							"value": "hola doc",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "localhost:3000/api/nuevoMensaje/62d0985502112ce692ba1825",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"nuevoMensaje",
+						"62d0985502112ce692ba1825"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
