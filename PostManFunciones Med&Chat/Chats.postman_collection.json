@@ -118,6 +118,32 @@
 				}
 			},
 			"response": []
+		},
+		{
+			"name": "listarMensajes",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiI2MmNkMmIxM2VkMDhmYzNiYmRhNzZlNTQiLCJub21icmUiOiJEb2MxIiwicm9sIjoiRG9jdG9yIiwiaWF0IjoxNjU3ODQ0MDcyLCJleHAiOjE2NTgxMDMyNzJ9.2SW8uaQZc0eOy57iOLS___6n4U3Oc-uvhezXbkS6r0o",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "localhost:3000/api/listarMensajes/62d0985502112ce692ba1825",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"listarMensajes",
+						"62d0985502112ce692ba1825"
+					]
+				}
+			},
+			"response": []
 		}
 	]
 }
