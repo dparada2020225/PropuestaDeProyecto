@@ -60,7 +60,86 @@ function verChatsCreados(req, res) {
     }
 
 }
+
+function nuevoMensaje(req, res) {
+    var chatId = req.params.chatId;
+    var token = req.user
+    var parametros = req.body
+
+    if(token.rol == "Doctor" ){
+            Chat.findOne({IdDoc: req.user.sub},(err, encontrado) => {
+            if(err) return res.status(500).send({ mensaje: 'Error en  la peticion'});
+            if(!encontrado) {
+                return res.status(500).send({ mensaje: 'no perteneces a este chat'})
+            }else{
+                Chat.findByIdAndUpdate(chatId, { $push: {  Mensajes : { Emisor: req.user.nombre, mensaje: parametros.mensaje } } }, {new : true}, 
+                    (err, mensajeAgregado) => {
+                        if(err) return res.status(500).send({ mensaje: 'Error en  la peticion'});
+                        if(!mensajeAgregado) return res.status(500).send({ mensaje: 'Error al agregar el mensaje'});
+            
+                        return res.status(200).send({ MensajeAgregado: mensajeAgregado.Mensajes });
+                    })
+            }  
+        })
+    }else if (token.rol == "Paciente") {
+        Chat.findOne({IdPac: req.user.sub},(err, encontrado) => {
+            if(err) return res.status(500).send({ mensaje: 'Error en  la peticion'});
+            if(!encontrado) {
+                return res.status(500).send({ mensaje: 'no perteneces a este chat'})
+            }else{
+                Chat.findByIdAndUpdate(chatId, { $push: {  Mensajes : { Emisor: req.user.nombre, mensaje: parametros.mensaje } } }, {new : true}, 
+                    (err, mensajeAgregado) => {
+                        if(err) return res.status(500).send({ mensaje: 'Error en  la peticion'});
+                        if(!mensajeAgregado) return res.status(500).send({ mensaje: 'Error al agregar el mensaje'});
+            
+                        return res.status(200).send({ MensajeAgregado: mensajeAgregado.Mensajes });
+                    })
+            }  
+        })
+    }
+ 
+}
+
+function listarMensajes(req, res) {
+    var chatId = req.params.chatId;
+    var token = req.user
+
+
+    if(token.rol == "Doctor" ){
+        Chat.findOne({IdDoc: req.user.sub},(err, encontrado) => {
+        if(err) return res.status(500).send({ mensaje: 'Error en  la peticion'});
+        if(!encontrado) {
+            return res.status(500).send({ mensaje: 'no perteneces a este chat'})
+        }else{
+            Chat.findById(chatId,(err, mensajes) => {
+                    if(err) return res.status(500).send({ mensaje: 'Error en  la peticion'});
+                    if(!mensajes) return res.status(500).send({ mensaje: 'Error al agregar el mensaje'});
+        
+                    return res.status(200).send({ Mensajes: mensajes.Mensajes });
+                })
+        }  
+    })
+}else if (token.rol == "Paciente") {
+    Chat.findOne({IdPac: req.user.sub},(err, encontrado) => {
+        if(err) return res.status(500).send({ mensaje: 'Error en  la peticion'});
+        if(!encontrado) {
+            return res.status(500).send({ mensaje: 'no perteneces a este chat'})
+        }else{
+            Chat.findById(chatId,(err, mensajes) => {
+                    if(err) return res.status(500).send({ mensaje: 'Error en  la peticion'});
+                    if(!mensajes) return res.status(500).send({ mensaje: 'Error al agregar el mensaje'});
+        
+                    return res.status(200).send({ Mensajes: mensajes.Mensajes });
+                })
+        }  
+    })
+}
+
+}
+
 module.exports = {
     AsignarChat,
-    verChatsCreados
+    verChatsCreados,
+    nuevoMensaje,
+    listarMensajes
 }
