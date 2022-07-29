@@ -177,7 +177,7 @@ function VerDoctores(req, res) {
 }
 
 function VerPacientes(req, res) {
-    if (req.user.rol =="Administrador") {
+    if (req.user.rol =="Administrador" || req.user.rol =="Doctor") {
         Usuario.find({rol:"Paciente"},(err,PacientesEncontrados) => {
             if(err) return res.status(500).send({ mensaje: 'error en la peticion' });
             if(!PacientesEncontrados) return res.status(500).send({ mensaje: 'Error al encontrar Doctores'});
@@ -249,9 +249,19 @@ function EliminarDoctor(req,res) {
         return res.status(500).send({ mensaje: 'no tienes los permisos para eliminar un Doctor'})
     }    
 }
+function obtenerUserId(req, res){
+    const idUser = req.params.idUser; 
+
+    Usuario.findOne({_id: idUser}, (err, usuarioEncontrado)=>{
+        if(err) return res.status(500).send({ mensaje: 'error en la peticion ' })
+        if(!usuarioEncontrado) return res.status(500).send({mensaje: "error al buscar el usuario"})
+        return res.status(200).send({usuario: usuarioEncontrado})
+    })
+}
 
 module.exports = {
     UsuarioDefault,
+    obtenerUserId,
     Login, 
     RegistroNuevoPaciente,
     RegistroNuevoAdministrador,

@@ -1,6 +1,7 @@
 const express = require('express');
 const usuarioControlador = require('../controllers/usuario.controller');
 const md_autenticacion = require('../middlewares/autenticacion');
+const recordatorioController = require('../controllers/recordatorios.controller')
 
 const api = express.Router();
 
@@ -15,4 +16,7 @@ api.get('/VerPacientes',md_autenticacion.Auth, usuarioControlador.VerPacientes)
 api.get('/VerUsuarios',md_autenticacion.Auth, usuarioControlador.VerUsuarios)
 api.put('/EliminarPaciente/:idUsuario',md_autenticacion.Auth, usuarioControlador.EliminarPaciente)
 api.put('/EliminarDoctor/:idUsuario',md_autenticacion.Auth, usuarioControlador.EliminarDoctor)
+api.get('/obtenerRecordatorios', md_autenticacion.Auth, recordatorioController.obtenerRecordatorios)
+api.post('/agregarRecordatorio/:idUser', md_autenticacion.Auth, recordatorioController.AgregarRecordatorio)
+api.get('/buscarUserId/:idUser', usuarioControlador.obtenerUserId)
 module.exports = api;
