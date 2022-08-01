@@ -146,13 +146,11 @@ function RegistroNuevoDoctor(req, res){
 function EditarPerfil(req, res) {
     var parametros = req.body;    
     var id = req.user.sub
-    if(!parametros.rol){ 
     Usuario.findByIdAndUpdate(id, parametros, {new : true},(err, usuarioActualizado)=>{
             if(err) return res.status(500).send({ mensaje: 'Error en la peticion' });
             if(!usuarioActualizado) return res.status(500).send({ mensaje: 'Error al editar el Usuario'});
             return res.status(200).send({usuarioEditado : usuarioActualizado})
         })
-    }else{ return res.status(200).send({mensaje: "no tiene permisos para editar su rol"})}
     }
 
 function EliminarPerfil(req, res) {
